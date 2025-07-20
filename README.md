@@ -64,20 +64,10 @@ BlogHub is a comprehensive blogging platform that combines a sleek Next.js front
 ### **1. Clone the Repository**
 
 ```bash
-git clone <repository-url>
-cd bloghub
+git clone https://github.com/armangral/bloghubnew
+cd bloghubnew
 ```
 
-The project structure should look like this:
-
-```
-bloghub/
-├── frontend/          # Next.js frontend application
-├── backend/           # Express.js backend API
-└── README.md          # This file
-```
-
----
 
 ## 🎨 Frontend Setup (Next.js - Port 3000)
 
@@ -296,12 +286,66 @@ npm run prisma:migrate  # Apply database migrations
 2. Deploy the `out` or `.next` directory
 3. Set environment variables in your hosting platform
 
+
 ### **Backend (Railway/Heroku/DigitalOcean)**
 
 1. Set up PostgreSQL database
 2. Configure environment variables
 3. Run database migrations: `npx prisma migrate deploy`
 4. Deploy the backend code
+
+# 🚀 Running the Project with Docker
+
+## Prerequisites
+
+- **Windows:**  
+  Ensure **Docker Desktop** is running.
+
+- **Linux:**  
+  Ensure **Docker** and **Docker Compose** are installed and running.
+
+---
+
+## ⚙️ Setup
+
+1. **Update Environment Files**
+
+Make sure you configure your environment variables:
+
+- `.env` (root directory)
+- `frontend/.env`
+- `backend/.env`
+
+---
+
+## 🐳 Run the Application
+
+### **Build Docker images (no cache):**
+
+```bash
+docker-compose build --no-cache
+````
+
+### **Start containers:**
+
+```bash
+docker-compose up -d
+```
+
+---
+
+## 🔍 Check Running Containers
+
+```bash
+docker ps
+```
+
+This will list all active containers in your project.
+
+---
+
+## ✅ You're ready to go!
+
 
 ## 📱 Features Walkthrough
 
@@ -317,3 +361,6 @@ npm run prisma:migrate  # Apply database migrations
 - **Post Creation**: Rich text editor for creating new blog posts
 - **Post Management**: Edit and delete existing posts
 - **Profile Management**: User account settings
+
+
+
