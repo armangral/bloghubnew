@@ -1,0 +1,6 @@
+# .dockerignore: Prevents certain files from being copied into the Docker image.
+node_modules
+.env
+Dockerfile
+docker-compose.yml
+README.md
